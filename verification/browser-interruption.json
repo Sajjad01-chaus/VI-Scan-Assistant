@@ -1,8 +1,0 @@
-{
-  "delayedSpeechDiscarded": true,
-  "activePlaybackPaused": true,
-  "cancelledCaptureSubmittedNoCommand": true,
-  "commandRequests": 1,
-  "pageErrors": [],
-  "method": "Browser with fake microphone and delayed synthetic TTS response; no subjective voice evaluation."
-}

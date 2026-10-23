@@ -32,3 +32,24 @@ verification/*.wav
 !verification/correction.wav
 !verification/browser-microphone.wav
 !verification/groq-tts-accepted-trial-1-playable.wav
+
+# Submission scope: retain internal working material locally.
+/AGENTS.md
+/Dockerfile
+/compose.yaml
+/.dockerignore
+/docs/*
+!/docs/system-design.md
+!/docs/UI-TESTING-GUIDE.md
+!/docs/architecture-one-page.pdf
+!/docs/diagrams/
+/scripts/*
+!/scripts/demo_api.py
+!/scripts/package_submission.py
+!/scripts/check_staged_submission.py
+/verification/*
+!/verification/tests.xml
+!/verification/model-selection.md
+!/verification/provider-comparison.json
+!/verification/api-demo.json
+!/verification/workspace-report.png

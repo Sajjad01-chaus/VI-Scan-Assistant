@@ -1,9 +1,0 @@
-{
-  "health": {
-    "status": "ok",
-    "synthetic_only": true
-  },
-  "retrieved_report_id": "RPT-001-03",
-  "audioWorkletHttp": 200,
-  "databaseStartup": "migration and seed succeeded under non-root user"
-}

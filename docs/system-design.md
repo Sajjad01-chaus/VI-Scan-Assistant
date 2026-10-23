@@ -1,6 +1,6 @@
 # VI-SCAN voice-first dental assistant: implemented design
 
-Updated 23 October 2026. This document describes the current local implementation. Earlier proposals are superseded where they differ. Read [verification status](implementation-status.md), [workflow audit](WORKFLOW-AUDIT.md) and [failure history](FAILURE-AND-FIX-LOG.md) together; implementation is not proof of universal conversational or clinical correctness.
+Updated 23 October 2026. This document describes the current local implementation. The implementation and recorded tests do not establish universal conversational or clinical correctness.
 
 ## 1. Scope and stack
 
@@ -258,7 +258,7 @@ APIs use no-store; the HTML/worklet revalidate and frontend API fetches disable 
 
 ## 8. Providers, latency and quota
 
-Configuration keys actually read by `config.py`: AI_MODE, DATABASE_URL, GOOGLE_API_KEY, GROQ_API_KEY, LLM_MODEL, GOOGLE_STT_MODEL, GROQ_STT_MODEL, GROQ_TTS_MODEL, GOOGLE_TTS_MODEL, TTS_VOICE, ALLOWED_ORIGINS and COOKIE_SECURE. APP_PORT is consumed by Compose for host-port mapping, not by the Python settings object. There are no generic LLM_PROVIDER/STT_PROVIDER selector variables.
+Configuration keys actually read by `config.py`: AI_MODE, DATABASE_URL, GOOGLE_API_KEY, GROQ_API_KEY, LLM_MODEL, GOOGLE_STT_MODEL, GROQ_STT_MODEL, GROQ_TTS_MODEL, GOOGLE_TTS_MODEL, TTS_VOICE, ALLOWED_ORIGINS and COOKIE_SECURE. APP_PORT is not consumed by the Python settings object. There are no generic LLM_PROVIDER/STT_PROVIDER selector variables.
 
 Configured defaults: Google gemini-3.5-transcribe-live; Groq openai/gpt-oss-120b; Groq whisper-large-v3 file fallback; Groq canopylabs/orpheus-v1-english with troy; Google gemini-3.8-flash-lite-tts fallback. These are recorded configuration/experiment choices, not a current provider-catalog or free-tier guarantee.
 
@@ -266,14 +266,14 @@ The HTTP command deadline is 55 seconds. Provider HTTP timeout is 25 seconds; tr
 
 Retrieval commonly uses one planner call; exact pending replies and supported acknowledgements use no text model. Indirect clarification may add one structured call. Questions/drafts add structured inference. Collection summaries add one answer call per matching report, with concurrency three. Speech generation and transcription have separate budgets; fallback can use another vendor. Suppressing unnecessary calls and muted rehearsal preserve demo allowance, but nothing guarantees a free full demo.
 
-[Initial experiments](../verification/model-selection.md) measured four synthetic audio clips and three-case extraction/TTS samples, not human accents, clinical accuracy, sustained latency or a current service SLA. Later TTS quota failures remain recorded in F14. Historical successful cloud audio is separate from later text-only/controlled browser verification. No new vendor call is needed to review these documents.
+[Initial experiments](../verification/model-selection.md) measured four synthetic audio clips and three-case extraction/TTS samples, not human accents, clinical accuracy, sustained latency or a current service SLA. Historical testing also encountered cloud TTS quota failures. Historical successful cloud audio is separate from later text-only/controlled browser verification. No new vendor call is needed to review these documents.
 
 ## 9. Reviewer run, verification and remaining work
 
-Follow [README](../README.md) for pinned native/Docker setup. Bootstrap runs migrations and inserts missing fixtures; only exact archived revision-1 fixtures are upgraded, preserving custom edits. Live mode needs two server-side keys and network access; explicit fixture mode supports limited samples/summaries without keys. Free-form questions and microphone/cloud speech require live mode; there is no silent fixture fallback.
+Follow [README](../README.md) for pinned local setup. Bootstrap runs migrations and inserts missing fixtures; only exact archived revision-1 fixtures are upgraded, preserving custom edits. Live mode needs two server-side keys and network access; explicit fixture mode supports limited samples/summaries without keys. Free-form questions and microphone/cloud speech require live mode; there is no silent fixture fallback.
 
-The current local result is 283 passing tests in `verification/tests.xml`. See [workflow audit](WORKFLOW-AUDIT.md) for 36 connected scenarios, named-question/clarification/acknowledgement matrices, partial collection failures and exact browser evidence. Tests do not establish every possible conversation. Prior Docker/Compose/native/provider checks are historical executions, not newly rerun after every edit.
+The current local result is 283 passing tests in `verification/tests.xml`. The suite includes 36 connected scenarios, named-question/clarification/acknowledgement matrices and partial collection failures. Tests do not establish every possible conversation. Prior native/provider checks are historical executions, not newly rerun after every edit.
 
-Use [the rehearsal](FINAL-REHEARSAL.md) and [four-minute script](FOUR-MINUTE-DEMO.md). A recorded human demo has not been delivered by the agent. The package includes documented API outputs/screenshots as allowed evidence. Candidate upload, final note review and HR submission remain manual actions.
+Use the [UI testing guide](UI-TESTING-GUIDE.md) to exercise the workflows. A recorded human demo has not been delivered by the agent. The package includes documented API outputs/screenshots as allowed evidence. Candidate upload, final note review and HR submission remain manual actions.
 
 Production work would require real identity/clinic-scoped queries, transport/storage encryption, retention/deletion controls, vendor privacy review, monitoring, multi-worker data/lock design and broader clinical and human-voice evaluations. Keys stay server-side, audio buffers are transient, and local transcripts/history persist. This POC is not regulatory certification or a medical diagnostic system.

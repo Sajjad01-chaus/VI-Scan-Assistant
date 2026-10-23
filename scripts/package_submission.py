@@ -3,15 +3,18 @@ from pathlib import Path
 import hashlib
 import json
 import zipfile
+import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 allowed_dirs={'backend','frontend','data','docs','scripts','verification'}
 excluded_parts={'node_modules','dist','__pycache__','.pytest_cache','.pytest-tmp','.venv','.uv-cache'}
-root_files={'AGENTS.md','README.md','requirements.txt','requirements-lock.txt','pytest.ini','alembic.ini','Dockerfile','compose.yaml','start.ps1','.env.example','.gitignore','.gitattributes','.dockerignore'}
+root_files={'README.md','requirements.txt','requirements-lock.txt','pytest.ini','alembic.ini','start.ps1','.env.example','.gitignore','.gitattributes'}
 files=[]
+tracked=set(subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode().split('\0'))
 audio_fixtures={'retrieval.wav','negation.wav','uncertainty.wav','correction.wav','browser-microphone.wav','groq-tts-accepted-trial-1-playable.wav'}
 for p in ROOT.rglob('*'):
     relative=p.relative_to(ROOT)
+    if relative.as_posix() not in tracked:continue
     if not p.is_file() or p.is_symlink() or any(part in excluded_parts for part in relative.parts):continue
     if len(relative.parts)==1:
         if p.name not in root_files and p.suffix not in {'.py','.mjs'}:continue

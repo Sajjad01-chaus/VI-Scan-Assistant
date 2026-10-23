@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def git(*args):
     return subprocess.check_output(['git',*args],cwd=ROOT)
 
-files=git('diff','--cached','--name-only','--diff-filter=ACMR','-z').decode().split('\0')
+files=git('ls-files','-z').decode().split('\0')
 files=[name for name in files if name]
 secrets=[]
 env=ROOT/'.env'
@@ -27,6 +27,7 @@ for name in files:
     forbidden=any(part in {'.venv','node_modules','dist','__pycache__','.cursor','tmp','output','.uv-cache'} or part.startswith('.pytest') for part in parts)
     forbidden=forbidden or (Path(name).name.startswith('.env') and Path(name).name!='.env.example')
     forbidden=forbidden or name.endswith(('.db','.db-shm','.db-wal','.zip','.pcm','.pyc','.tsbuildinfo'))
+    forbidden=forbidden or name in {'AGENTS.md','Dockerfile','compose.yaml','.dockerignore'}
     content=git('show',':'+name)
     total+=len(content)
     if forbidden or any(key in content for key in secrets) or any(re.search(pattern,content) for pattern in patterns):

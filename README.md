@@ -60,7 +60,7 @@ Latest recorded local unit/API result: **283 passed**, using isolated SQLite dat
 python -m pytest -q
 ```
 
-With the local server running in fixture mode, `python -m scripts.demo_api` exercises the documented API sequence. [Recorded API evidence](verification/api-demo.json) is included. The [UI guide](docs/UI-TESTING-GUIDE.md) describes manual checks; the final video link will be added after recording.
+With the local server running in fixture mode, `python -m scripts.demo_api` exercises the documented API sequence. [Recorded API evidence](verification/api-demo.json) is included. The [UI guide](docs/UI-TESTING-GUIDE.md) describes manual checks.
 
 ## Limitations and production considerations
 
@@ -74,8 +74,4 @@ With the local server running in fixture mode, `python -m scripts.demo_api` exer
 
 **Works:** report retrieval and identity clarification, grounded follow-ups, structured dictation/review/save, session recovery and voice integration, with 283 passing recorded local tests.
 
-**Incomplete:** the final demo recording is pending. Broader real-device voice/clinical evaluation, production authentication and multi-instance operation are not implemented.
-
 **With more time:** expand spoken/adversarial evaluations, measure end-to-end latency and name-recovery accuracy, improve endpointing and evidence rules, and add production identity, retention and monitoring controls.
-
-Repository contents are limited to application source/tests, synthetic seeds, setup files, essential design/testing documentation, and selected verification evidence. Credentials, local databases, dependencies, development notes and generated archives are excluded.

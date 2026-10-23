@@ -17,7 +17,7 @@ from .schemas import Command, Selection, DraftEdit, Version, SpeechRequest
 from .voice import relay_voice
 
 ai=AI();service=Service(ai)
-build_files=[ROOT/'backend/app'/name for name in ['main.py','service.py','providers.py','answers.py','schemas.py','voice.py']]+[ROOT/'frontend/dist/index.html']
+build_files=[ROOT/'backend/app'/name for name in ['main.py','service.py','providers.py','answers.py','drafts.py','schemas.py','voice.py']]+[ROOT/'frontend/dist/index.html']
 BUILD_ID=hashlib.sha256(b''.join(p.read_bytes() for p in build_files if p.exists())).hexdigest()[:12]
 
 @asynccontextmanager

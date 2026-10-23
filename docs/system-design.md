@@ -115,6 +115,8 @@ flowchart TD
 
 The actual public Finding schema contains observation, anatomical_site (a string or unspecified), polarity (present/negated/unspecified), certainty (asserted/uncertain/not_definite) and a verbatim evidence string. Python adds source_span and review_flags. Draft body JSON also stores source_transcript, corrections, readable_report and requires_clinician_review=true. Inspect `/docs` or `schemas.py` for exact constraints; a nested tooth-anatomy object is not the implemented contract.
 
+The readable report is formatted from validated fields into findings, uncertain findings, pertinent negatives and explicitly dictated recommendations, with a draft review status. It does not add diagnoses, normal findings or treatment. Original evidence spans remain separate. Field edits leave the last validated report visible until Update report preview, Apply JSON or Save revalidates them; export contains the same server-generated report.
+
 Validation rejects unsupported quoted observations, invented negation, removed uncertainty/no-definite qualifiers, incomplete phrases and certain conflicting sites. Anatomy must occur within the finding evidence or an immediately preceding standalone anatomical fragment, including explicit corrections. The original transcript and superseded correction text remain recorded. These checks do not establish universal clinical fidelity.
 
 A preview may be unbound when no patient is selected, but an unresolved identity switch blocks creation and a save requires a selected patient. A draft already assigned to another patient cannot be saved under the current one. Version checks reject stale edits/saves. PATCH and export return a preview; perform export before the final save when demonstrating saved status. Saving never signs a report or overwrites a source report.
@@ -272,7 +274,7 @@ Retrieval commonly uses one planner call; exact pending replies and supported ac
 
 Follow [README](../README.md) for pinned local setup. Bootstrap runs migrations and inserts missing fixtures; only exact archived revision-1 fixtures are upgraded, preserving custom edits. Live mode needs two server-side keys and network access; explicit fixture mode supports limited samples/summaries without keys. Free-form questions and microphone/cloud speech require live mode; there is no silent fixture fallback.
 
-The current local result is 283 passing tests in `verification/tests.xml`. The suite includes 36 connected scenarios, named-question/clarification/acknowledgement matrices and partial collection failures. Tests do not establish every possible conversation. Prior native/provider checks are historical executions, not newly rerun after every edit.
+The current local result is 293 passing tests in `verification/tests.xml`. The suite includes 36 connected scenarios, named-question/clarification/acknowledgement matrices and partial collection failures. Tests do not establish every possible conversation. Prior native/provider checks are historical executions, not newly rerun after every edit.
 
 Use the [UI testing guide](UI-TESTING-GUIDE.md) to exercise the workflows. A recorded human demo has not been delivered by the agent. The package includes documented API outputs/screenshots as allowed evidence. Candidate upload, final note review and HR submission remain manual actions.
 

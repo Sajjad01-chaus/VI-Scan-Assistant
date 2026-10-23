@@ -17,7 +17,7 @@ Start a New session in Find / ask.
 With a patient selected, switch to Create draft.
 
 1. Dictate or type **Possible periapical radiolucency near the upper left first molar. Further assessment is required.**
-2. Inspect the source transcript, observation, anatomical site, uncertain certainty, readable preview and JSON. This is a draft of dictated observations, not an image diagnosis.
+2. Inspect the source transcript, observation, anatomical site, uncertain certainty, readable report sections and JSON. After field edits, Update report preview validates and refreshes the report; invalid edits leave the last validated report intact. This is a draft of dictated observations, not an image diagnosis.
 3. Change uncertain to asserted and attempt Save reviewed draft. Expect rejection because the source says possible.
 4. Restore uncertain and save. Expect adjacent success feedback, a version and **Saved as draft**. The report still requires clinician review.
 5. Reload. Expect the conversation, selected report and saved draft to recover. Use the session draft selector if needed. Reload re-enables Spoken replies, so mute again during rehearsal.

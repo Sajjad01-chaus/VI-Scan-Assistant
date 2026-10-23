@@ -25,3 +25,5 @@
 .wordmark small.build-id{font-size:7px;letter-spacing:.4px;color:#6b7e77;margin-top:3px}
 
 .draft-save-area{border-top:1px solid #e1e9e3;padding-top:14px;margin-top:18px}.draft-save-area>small{display:block;margin-top:10px;font-size:11px;color:#687c72;line-height:1.6}.draft-save-feedback{padding:11px 13px;border-radius:6px;margin-top:12px;font-size:13px;line-height:1.6;border:1px solid #cce2d5;background:#edf7f0;color:#245b42}.draft-save-feedback.error{background:#fff3ef;border-color:#ecc9bd;color:#8d3627}.draft-save-feedback.pending{background:#f3f6f4;border-color:#dce5df;color:#50675b}
+
+.readable-draft p{white-space:pre-line}.readable-draft button{margin:10px 0;padding:8px 12px;border:1px solid #b4ccc0;border-radius:5px;background:#eff6f1;color:#24594b}

@@ -11,6 +11,7 @@ from . import db as store
 from .schemas import Finding, Extraction
 from .providers import ProviderError, normalize_plan
 from .answers import compose_answer, all_reports_requested
+from .drafts import render_draft_report
 
 def uid():return str(uuid.uuid4())
 def digest(token):return hashlib.sha256(token.encode()).hexdigest()
@@ -117,7 +118,7 @@ class Service:
                     result=json.loads(turn.response_json)
                     messages.append({'role':'assistant','text':result['message'],'result':result})
             drafts=db.scalars(select(store.Draft).where(store.Draft.session_id==session_id)).all()
-            return {'messages':messages,'drafts':[{'id':d.id,'patient_id':d.patient_id,'version':d.version,'status':d.status,**json.loads(d.body_json)} for d in drafts]}
+            return {'messages':messages,'drafts':[{'id':d.id,'patient_id':d.patient_id,'version':d.version,'status':d.status,**json.loads(d.body_json),'readable_report':render_draft_report(json.loads(d.body_json)['findings'],json.loads(d.body_json)['source_transcript'])} for d in drafts]}
 
     def recent_dialogue(self, session_id, snap):
         with self.factory() as db:
@@ -343,7 +344,7 @@ class Service:
                         draft_id=uid()
                         correction=re.search(r'\bcorrection\b[,\s:]*',command.text,re.I)
                         corrections=[] if not correction else [{'marker_start':correction.start(),'superseded_text':command.text[:correction.start()].strip(),'corrected_text':command.text[correction.end():].split('.')[0].strip()}]
-                        body={'source_transcript':command.text,'findings':findings,'corrections':corrections,'readable_report':' '.join(dict.fromkeys(f['evidence'] for f in findings)),'requires_clinician_review':True}
+                        body={'source_transcript':command.text,'findings':findings,'corrections':corrections,'readable_report':render_draft_report(findings,command.text),'requires_clinician_review':True}
                         with self.factory.begin() as db:db.add(store.Draft(id=draft_id,session_id=session_id,patient_id=snap['patient']['id'] if snap['patient'] else None,body_json=json.dumps(body),status='preview',version=1))
                         trace.append({'tool':'extract_findings','arguments':{'source':'current transcript'}})
                         result={'kind':'draft','message':'Draft prepared. Review the source, findings and uncertainty before saving.','draft':{'id':draft_id,'version':1,'status':'preview','patient_id':snap['patient']['id'] if snap['patient'] else None,**body},'evidence':[]}
@@ -388,7 +389,9 @@ class Service:
             draft=db.get(store.Draft,draft_id)
             if not draft:raise HTTPException(404,'Draft not found.')
         self.owned(draft.session_id,owner)
-        return {'id':draft.id,'session_id':draft.session_id,'patient_id':draft.patient_id,'version':draft.version,'status':draft.status,**json.loads(draft.body_json)}
+        body=json.loads(draft.body_json)
+        body['readable_report']=render_draft_report(body['findings'],body['source_transcript'])
+        return {'id':draft.id,'session_id':draft.session_id,'patient_id':draft.patient_id,'version':draft.version,'status':draft.status,**body}
 
     async def edit_draft(self, draft_id, owner, edit):
         old=self.get_draft(draft_id,owner)
@@ -398,7 +401,7 @@ class Service:
                 if d.version!=edit.version:raise HTTPException(409,'Draft changed. Reload before editing.')
                 body=json.loads(d.body_json)
                 findings=validate_findings(body['source_transcript'],[f.model_dump() for f in edit.findings])
-                body.update(findings=findings,readable_report=' '.join(dict.fromkeys(f['evidence'] for f in findings)))
+                body.update(findings=findings,readable_report=render_draft_report(findings,body['source_transcript']))
                 db.add(store.DraftRevision(id=uid(),draft_id=d.id,version=d.version,body_json=d.body_json))
                 d.body_json=json.dumps(body);d.version+=1;d.status='preview'
             return self.get_draft(draft_id,owner)

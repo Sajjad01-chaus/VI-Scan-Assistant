@@ -32,7 +32,7 @@ The default **fixture mode** supports limited sample retrieval, summaries and di
 
 - Voice/text report retrieval with modality/date filtering, ambiguous-name clarification, confirmation-only approximate matches and conversational corrections.
 - Session-aware single/all-report summaries and report questions with original source excerpts, report IDs and versions. Missing information and partial failures are explicit.
-- Clinical dictation into editable findings and JSON, retaining source evidence, negation, uncertainty and corrections. Explicit versioned saving keeps every result a draft requiring clinician review.
+- Clinical dictation into editable findings and JSON, retaining source evidence, negation, uncertainty and corrections. The readable report groups findings, uncertainty, pertinent negatives and recorded recommendations. Explicit versioned saving keeps every result a draft requiring clinician review.
 - Streaming transcription, automatic pause submission, manual stop/cancel, automatic spoken responses and playback interruption. Cloud speech failures can use a disclosed browser voice fallback.
 - Conversation, selected report and saved drafts survive refresh in the owned demo session.
 
@@ -54,7 +54,7 @@ Configured providers: Google streaming STT (`gemini-3.5-transcribe-live`), Groq 
 
 ## Verification
 
-Latest recorded local unit/API result: **283 passed**, using isolated SQLite databases and mocked providers; [JUnit evidence](verification/tests.xml). Historical real-provider experiments are distinct from these automated tests and do not guarantee current quota or human speech accuracy.
+Latest recorded local unit/API result: **293 passed**, using isolated SQLite databases and mocked providers; [JUnit evidence](verification/tests.xml). Historical real-provider experiments are distinct from these automated tests and do not guarantee current quota or human speech accuracy.
 
 ```sh
 python -m pytest -q
@@ -72,6 +72,6 @@ With the local server running in fixture mode, `python -m scripts.demo_api` exer
 
 ## Submission note
 
-**Works:** report retrieval and identity clarification, grounded follow-ups, structured dictation/review/save, session recovery and voice integration, with 283 passing recorded local tests.
+**Works:** report retrieval and identity clarification, grounded follow-ups, structured dictation/review/save, session recovery and voice integration, with 293 passing recorded local tests.
 
 **With more time:** expand spoken/adversarial evaluations, measure end-to-end latency and name-recovery accuracy, improve endpointing and evidence rules, and add production identity, retention and monitoring controls.

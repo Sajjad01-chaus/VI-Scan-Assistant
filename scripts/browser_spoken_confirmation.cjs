@@ -1,0 +1,23 @@
+const {chromium}=require('../frontend/node_modules/playwright');
+const fs=require('fs');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.CHROME_PATH,headless:true,args:['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']});
+ const page=await browser.newPage({viewport:{width:1512,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const transcripts=["Hello, open Ayesha Khan's report.",'Yes.'];let captures=0;
+ await page.routeWebSocket('**/api/sessions/*/voice',ws=>{const text=transcripts[captures++];let sent=false;ws.onMessage(()=>{if(!sent){sent=true;ws.send(JSON.stringify({type:'transcript.final',text,provider:'test-transcript'}));}});ws.send(JSON.stringify({type:'voice.ready'}));});
+ await page.goto('http://127.0.0.1:8000');
+ await page.locator('.patient').filter({hasText:'Priya Shah'}).click();
+ await page.getByRole('heading',{name:'Priya Shah',exact:true}).waitFor();
+ const promptAudio=page.waitForResponse(r=>r.url().endsWith('/speech')&&r.status()===200);
+ await page.getByRole('button',{name:'Start microphone'}).click();
+ await page.getByRole('heading',{name:'Did you mean Aisha Khan, patient PT-004?',exact:true}).waitFor();
+ await promptAudio;
+ await page.screenshot({path:'verification/spoken-confirmation.png',fullPage:true});
+ const openedAudio=page.waitForResponse(r=>r.url().endsWith('/speech')&&r.status()===200);
+ await page.getByRole('button',{name:'Start microphone'}).click();
+ await page.getByRole('heading',{name:'Aisha Khan',exact:true}).waitFor();await openedAudio;
+ if(!(await page.locator('.active-context').innerText()).includes('RPT-004-03'))throw Error('Wrong report');
+ if(captures!==2||errors.length)throw Error(JSON.stringify({captures,errors}));
+ fs.writeFileSync('verification/spoken-confirmation-browser.json',JSON.stringify({passed:['voice transcript prompts with exact name and ID','prompt automatically uses live TTS','second voice transcript Yes opens PT-004','report opening automatically uses live TTS'],captures,pageErrors:errors,limitation:'WebSocket STT transcripts injected to reproduce the reported misrecognition deterministically; actual STT accuracy and human microphone are not tested here. TTS and LLM requests are live.'},null,2));
+ await browser.close();console.log('Spoken confirmation UI flow passed');
+})().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,122 @@
+[
+  {
+    "caseId": "retrieval",
+    "reference": "Open Priya Sharma's latest OPG report.",
+    "model": "gemini-3.5-transcribe-live",
+    "partials": [
+      "Open",
+      "Open Priya",
+      "Open Priya Sharma's",
+      "Open Priya Sharma's latest",
+      "Open Priya Sharma's latest OPG.",
+      "Open Priya Sharma's latest OPG.",
+      "Open Priya Sharma's latest OPG."
+    ],
+    "finals": [
+      "Open Priya Sharma's latest OPG report."
+    ],
+    "setupMs": 1179,
+    "audioDurationMs": 3505,
+    "firstPartialMs": 756,
+    "audioSentMs": 3922,
+    "finalFromAudioStartMs": 4323,
+    "finalAfterSendMs": 401,
+    "totalSessionMs": 6508,
+    "closeCode": 1000,
+    "closeReason": ""
+  },
+  {
+    "caseId": "negation",
+    "reference": "Lower right third molar is horizontally impacted. No evidence of a fracture.",
+    "model": "gemini-3.5-transcribe-live",
+    "partials": [
+      "Lower",
+      "lower right",
+      "lower right third molar",
+      "lower right third molar is",
+      "Lower right third molar is horizontally",
+      "Lower right third molar is horizontally impacted.",
+      "Lower right third molar is horizontally impacted.",
+      "Lower right third molar is horizontally impacted.",
+      "Lower right third molar is horizontally impacted. No",
+      "Lower right third molar is horizontally impacted. No evidence of a",
+      "Lower right third molar is horizontally impacted. No evidence of a fracture."
+    ],
+    "finals": [
+      "Lower right third molar is horizontally impacted. No evidence of a fracture."
+    ],
+    "setupMs": 735,
+    "audioDurationMs": 5715,
+    "firstPartialMs": 1106,
+    "audioSentMs": 6330,
+    "finalFromAudioStartMs": 6790,
+    "finalAfterSendMs": 460,
+    "totalSessionMs": 8538,
+    "closeCode": 1000,
+    "closeReason": ""
+  },
+  {
+    "caseId": "uncertainty",
+    "reference": "Possible periapical radiolucency near the upper left first molar. Further assessment is required.",
+    "model": "gemini-3.5-transcribe-live",
+    "partials": [
+      "Possible",
+      "possible periapical",
+      "possible periapical",
+      "possible periapical radiolucency",
+      "possible periapical radiolucency near the",
+      "possible periapical radiolucency near the upper left",
+      "possible periapical radiolucency near the upper left first",
+      "possible periapical radiolucency near the upper left first molar",
+      "possible periapical radiolucency near the upper left first molar",
+      "possible periapical radiolucency near the upper left first molar Further",
+      "possible periapical radiolucency near the upper left first molar Further",
+      "possible periapical radiolucency near the upper left first molar Further assessment is",
+      "possible periapical radiolucency near the upper left first molar Further assessment is required."
+    ],
+    "finals": [
+      "Possible periapical radiolucency near the upper left first molar. Further assessment is required."
+    ],
+    "setupMs": 687,
+    "audioDurationMs": 7145,
+    "firstPartialMs": 1273,
+    "audioSentMs": 7861,
+    "finalFromAudioStartMs": 8229,
+    "finalAfterSendMs": 368,
+    "totalSessionMs": 9929,
+    "closeCode": 1000,
+    "closeReason": ""
+  },
+  {
+    "caseId": "correction",
+    "reference": "Upper right second molar. Correction, upper left second molar. No definite caries identified.",
+    "model": "gemini-3.5-transcribe-live",
+    "partials": [
+      "upper right",
+      "upper right second molar",
+      "upper right second molar",
+      "upper right second molar",
+      "upper right second molar",
+      "upper right second molar correction",
+      "upper right second molar correction upper left",
+      "upper right second molar correction upper left second",
+      "upper right second molar correction upper left second molar",
+      "upper right second molar correction upper left second molar",
+      "upper right second molar correction upper left second molar",
+      "upper right second molar correction upper left second molar no definite",
+      "upper right second molar correction upper left second molar no definite caries",
+      "upper right second molar correction upper left second molar no definite caries",
+      "upper right second molar correction upper left second molar no definite caries identified"
+    ],
+    "finals": [
+      "Upper right second molar. Correction, upper left second molar. No definite caries identified."
+    ],
+    "setupMs": 708,
+    "audioDurationMs": 8015,
+    "firstPartialMs": 1252,
+    "audioSentMs": 8822,
+    "finalFromAudioStartMs": 9212,
+    "finalAfterSendMs": 391,
+    "totalSessionMs": 10921
+  }
+]

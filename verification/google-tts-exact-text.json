@@ -1,0 +1,44 @@
+{
+  "methodology": "Three TTS requests per provider with alternating order and identical short response. Times include network and complete response transfer, not time to playable streaming audio. Voice quality not scored.",
+  "results": [
+    {
+      "task": "tts",
+      "provider": "google",
+      "model": "gemini-3.8-flash-lite-tts",
+      "trial": 1,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 2390,
+      "elapsedMs": 2633,
+      "audioBytes": 159716,
+      "audioFile": "google-tts-exact-trial-1.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "google",
+      "model": "gemini-3.8-flash-lite-tts",
+      "trial": 2,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 2934,
+      "elapsedMs": 3042,
+      "audioBytes": 159716,
+      "audioFile": "google-tts-exact-trial-2.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "google",
+      "model": "gemini-3.8-flash-lite-tts",
+      "trial": 3,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 1886,
+      "elapsedMs": 2099,
+      "audioBytes": 161636,
+      "audioFile": "google-tts-exact-trial-3.wav"
+    }
+  ]
+}

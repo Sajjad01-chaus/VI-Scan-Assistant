@@ -1,0 +1,181 @@
+{
+  "synthetic_only": true,
+  "patients": [
+    {
+      "id": "PT-001",
+      "name": "Priya Sharma",
+      "reference": "SYNTH-0001"
+    },
+    {
+      "id": "PT-002",
+      "name": "Priya Shah",
+      "reference": "SYNTH-0002"
+    },
+    {
+      "id": "PT-003",
+      "name": "Arjun Mehta",
+      "reference": "SYNTH-0003"
+    },
+    {
+      "id": "PT-004",
+      "name": "Aisha Khan",
+      "reference": "SYNTH-0004"
+    },
+    {
+      "id": "PT-005",
+      "name": "Rohan Desai",
+      "reference": "SYNTH-0005"
+    },
+    {
+      "id": "PT-006",
+      "name": "Meera Iyer",
+      "reference": "SYNTH-0006"
+    }
+  ],
+  "reports": [
+    {
+      "id": "RPT-001-01",
+      "patient_id": "PT-001",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nNo earlier synthetic examination is available for this baseline record.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-001-02",
+      "patient_id": "PT-001",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic limited-field cone-beam CT text scenario. No DICOM images were acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently in this recorded field.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate in this recorded field.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-001-03",
+      "patient_id": "PT-001",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-002-01",
+      "patient_id": "PT-002",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of a possible apical finding at the upper left first molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nNo earlier synthetic examination is available for this baseline record.\n\nFINDINGS:\nPossible periapical radiolucency near the upper left first molar. Further clinical assessment is required. A restoration is described at the upper left first molar. The margins of the suspected apical lucency are indistinct. Superimposition limits assessment of the apices. No root fracture is established in this mock report.\n\nIMPRESSION:\nPossible apical radiolucency at the upper left first molar; the appearance is not a definitive diagnosis.\n\nCLINICAL CORRELATION:\nCorrelate with clinical examination and pulp testing. This text does not establish infection, symptoms or a treatment plan.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-002-02",
+      "patient_id": "PT-002",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of a possible apical finding at the upper left first molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic limited-field cone-beam CT text scenario. No DICOM images were acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nPossible periapical radiolucency near the upper left first molar. Further clinical assessment is required. A restoration is described at the upper left first molar. The margins of the suspected apical lucency are indistinct. Superimposition limits assessment of the apices. No root fracture is established in this mock report.\n\nIMPRESSION:\nPossible apical radiolucency at the upper left first molar; the appearance is not a definitive diagnosis.\n\nCLINICAL CORRELATION:\nCorrelate with clinical examination and pulp testing. This text does not establish infection, symptoms or a treatment plan.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-002-03",
+      "patient_id": "PT-002",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of a possible apical finding at the upper left first molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nPossible periapical radiolucency near the upper left first molar. Further clinical assessment is required. A restoration is described at the upper left first molar. The margins of the suspected apical lucency are indistinct. Superimposition limits assessment of the apices. No root fracture is established in this mock report.\n\nIMPRESSION:\nPossible apical radiolucency at the upper left first molar; the appearance is not a definitive diagnosis.\n\nCLINICAL CORRELATION:\nCorrelate with clinical examination and pulp testing. This text does not establish infection, symptoms or a treatment plan.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-003-01",
+      "patient_id": "PT-003",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of the eruption status of the lower left third molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nNo earlier synthetic examination is available for this baseline record.\n\nFINDINGS:\nLower left third molar is partially erupted. No definite caries identified in the described tooth. The tooth has a mild mesial inclination. Its crown is adjacent to the distal surface of the lower left second molar. The visible mandibular inferior border is continuous. Overlap limits assessment of the interproximal surfaces.\n\nIMPRESSION:\nPartially erupted lower left third molar. No definite carious lesion is established in the described tooth; early disease is not excluded.\n\nCLINICAL CORRELATION:\nCorrelate with an intraoral examination. Soft-tissue inflammation and symptom severity cannot be assessed from this text report.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-003-02",
+      "patient_id": "PT-003",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of the eruption status of the lower left third molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic limited-field cone-beam CT text scenario. No DICOM images were acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower left third molar is partially erupted. No definite caries identified in the described tooth. The tooth has a mild mesial inclination. Its crown is adjacent to the distal surface of the lower left second molar. The visible mandibular inferior border is continuous. Overlap limits assessment of the interproximal surfaces.\n\nIMPRESSION:\nPartially erupted lower left third molar. No definite carious lesion is established in the described tooth; early disease is not excluded.\n\nCLINICAL CORRELATION:\nCorrelate with an intraoral examination. Soft-tissue inflammation and symptom severity cannot be assessed from this text report.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-003-03",
+      "patient_id": "PT-003",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of the eruption status of the lower left third molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower left third molar is partially erupted. No definite caries identified in the described tooth. The tooth has a mild mesial inclination. Its crown is adjacent to the distal surface of the lower left second molar. The visible mandibular inferior border is continuous. Overlap limits assessment of the interproximal surfaces.\n\nIMPRESSION:\nPartially erupted lower left third molar. No definite carious lesion is established in the described tooth; early disease is not excluded.\n\nCLINICAL CORRELATION:\nCorrelate with an intraoral examination. Soft-tissue inflammation and symptom severity cannot be assessed from this text report.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-004-01",
+      "patient_id": "PT-004",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nBaseline assessment of supporting bone levels in a fictional patient undergoing periodontal review.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nNo earlier synthetic examination is available for this baseline record.\n\nFINDINGS:\nMild generalized horizontal bone loss is described. Findings require clinician review. Crestal bone levels are mildly reduced in the posterior regions. No localized vertical defect is described. The visible mandibular cortices are continuous.\n\nIMPRESSION:\nMild generalized horizontal reduction of alveolar bone levels. Periodontal disease staging cannot be assigned from this report alone.\n\nCLINICAL CORRELATION:\nCorrelate with probing measurements, attachment levels and clinical history. This mock report does not establish active disease or progression.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-004-02",
+      "patient_id": "PT-004",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nBaseline assessment of supporting bone levels in a fictional patient undergoing periodontal review.\n\nTECHNIQUE:\nSynthetic limited-field cone-beam CT text scenario. No DICOM images were acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nMild generalized horizontal bone loss is described. Findings require clinician review. Crestal bone levels are mildly reduced in the posterior regions. No localized vertical defect is described. A restoration is noted at the lower left first molar. The visible mandibular cortices are continuous.\n\nIMPRESSION:\nMild generalized horizontal reduction of alveolar bone levels. Periodontal disease staging cannot be assigned from this report alone.\n\nCLINICAL CORRELATION:\nCorrelate with probing measurements, attachment levels and clinical history. This mock report does not establish active disease or progression.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-004-03",
+      "patient_id": "PT-004",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nBaseline assessment of supporting bone levels in a fictional patient undergoing periodontal review.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nMild generalized horizontal bone loss is described. Findings require clinician review. Crestal bone levels are mildly reduced in the posterior regions. No localized vertical defect is described. A restoration is noted at the lower left first molar. The visible mandibular cortices are continuous.\n\nIMPRESSION:\nMild generalized horizontal reduction of alveolar bone levels. Periodontal disease staging cannot be assigned from this report alone.\n\nCLINICAL CORRELATION:\nCorrelate with probing measurements, attachment levels and clinical history. This mock report does not establish active disease or progression.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-005-01",
+      "patient_id": "PT-005",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of posterior dentition and a missing upper right third molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nNo earlier synthetic examination is available for this baseline record.\n\nFINDINGS:\nUpper right third molar is absent. No upper right third-molar tooth structure is identified in the described region. The cause of absence cannot be determined from the available history. The adjacent upper right second molar is present. No focal osseous abnormality is described in that region.\n\nIMPRESSION:\nAbsent upper right third molar. Prior extraction and developmental absence cannot be distinguished from this report.\n\nCLINICAL CORRELATION:\nCorrelate with dental history. Findings outside the specifically described region are not comprehensively assessed.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-005-02",
+      "patient_id": "PT-005",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of posterior dentition and a missing upper right third molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic limited-field cone-beam CT text scenario. No DICOM images were acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nUpper right third molar is absent. No upper right third-molar tooth structure is identified in the described region. The cause of absence cannot be determined from the available history. The adjacent upper right second molar is present. No focal osseous abnormality is described in that region.\n\nIMPRESSION:\nAbsent upper right third molar. Prior extraction and developmental absence cannot be distinguished from this report.\n\nCLINICAL CORRELATION:\nCorrelate with dental history. Findings outside the specifically described region are not comprehensively assessed.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-005-03",
+      "patient_id": "PT-005",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nAssessment of posterior dentition and a missing upper right third molar in a fictional patient.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nUpper right third molar is absent. No upper right third-molar tooth structure is identified in the described region. The cause of absence cannot be determined from the available history. The adjacent upper right second molar is present. No focal osseous abnormality is described in that region.\n\nIMPRESSION:\nAbsent upper right third molar. Prior extraction and developmental absence cannot be distinguished from this report.\n\nCLINICAL CORRELATION:\nCorrelate with dental history. Findings outside the specifically described region are not comprehensively assessed.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-006-01",
+      "patient_id": "PT-006",
+      "modality": "IOPA",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nFocused assessment of the upper right first-molar apical region in a fictional patient.\n\nTECHNIQUE:\nSynthetic intraoral periapical text scenario centered on the upper right first molar. No image is attached.\n\nCOMPARISON:\nNo earlier synthetic examination is available for this baseline record.\n\nFINDINGS:\nNo definite periapical radiolucency is identified in the described region. Clinical correlation is advised. A restoration is described at the upper right first molar. The visible apical outline is maintained in the recorded projection. Root overlap limits assessment of the palatal root. Early apical pathology cannot be excluded by this appearance alone.\n\nIMPRESSION:\nNo definite periapical radiolucency at the upper right first molar in the described view. This does not establish the cause of any symptoms.\n\nCLINICAL CORRELATION:\nCorrelate with examination and pulp testing when clinically indicated. This mock text is not a treatment recommendation.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-006-02",
+      "patient_id": "PT-006",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nFocused assessment of the upper right first-molar apical region in a fictional patient.\n\nTECHNIQUE:\nSynthetic limited-field cone-beam CT text scenario. No DICOM images were acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nNo definite periapical radiolucency is identified in the described region. Clinical correlation is advised. A restoration is described at the upper right first molar. The visible apical outline is maintained in the recorded projection. Root overlap limits assessment of the palatal root. Early apical pathology cannot be excluded by this appearance alone.\n\nIMPRESSION:\nNo definite periapical radiolucency at the upper right first molar in the described view. This does not establish the cause of any symptoms.\n\nCLINICAL CORRELATION:\nCorrelate with examination and pulp testing when clinically indicated. This mock text is not a treatment recommendation.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    },
+    {
+      "id": "RPT-006-03",
+      "patient_id": "PT-006",
+      "modality": "IOPA",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 2,
+      "content": "CLINICAL INDICATION:\nFocused assessment of the upper right first-molar apical region in a fictional patient.\n\nTECHNIQUE:\nSynthetic intraoral periapical text scenario centered on the upper right first molar. No image is attached.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nNo definite periapical radiolucency is identified in the described region. Clinical correlation is advised. A restoration is described at the upper right first molar. The visible apical outline is maintained in the recorded projection. Root overlap limits assessment of the palatal root. Early apical pathology cannot be excluded by this appearance alone.\n\nIMPRESSION:\nNo definite periapical radiolucency at the upper right first molar in the described view. This does not establish the cause of any symptoms.\n\nCLINICAL CORRELATION:\nCorrelate with examination and pulp testing when clinically indicated. This mock text is not a treatment recommendation.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "methodology": "Three TTS requests per provider with alternating order and identical short response. Times include network and complete response transfer, not time to playable streaming audio. Voice quality not scored.",
+  "results": [
+    {
+      "task": "tts_automated_content_check",
+      "speechProvider": "google",
+      "recognizer": "whisper-large-v3",
+      "audioFile": "google-tts-exact-trial-1.wav",
+      "ok": true,
+      "http": 200,
+      "headersMs": 1208,
+      "elapsedMs": 1210,
+      "transcript": " Your draft report is ready for clinician review.",
+      "wer": 0
+    }
+  ]
+}

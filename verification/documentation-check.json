@@ -1,0 +1,9 @@
+{
+  "documents": 15,
+  "checked_local_links": 87,
+  "canonical_mermaid_sources": 6,
+  "recorded_tests": 283,
+  "recorded_failures": 0,
+  "errors": [],
+  "limits": "Local consistency check only; historical failure-log counts are intentionally retained. External URLs and actual device/provider behavior were not retested."
+}

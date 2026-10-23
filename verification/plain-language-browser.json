@@ -1,0 +1,41 @@
+{
+  "passed": [
+    "user mixed thanks/simple-language request produces plain-language finding",
+    "original clinical quotations retained as evidence",
+    "technique described as mock OPG rather than implying completed imaging"
+  ],
+  "simple": {
+    "message": "The lower right wisdom tooth is lying sideways and is impacted (stuck). The report cannot clearly establish how the tooth relates to the nerve canal in the lower jaw.",
+    "evidence": [
+      {
+        "report_id": "RPT-001-03",
+        "report_version": 2,
+        "quote": "Lower right third molar is horizontally impacted.",
+        "start": 386,
+        "end": 435
+      },
+      {
+        "report_id": "RPT-001-03",
+        "report_version": 2,
+        "quote": "The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.",
+        "start": 634,
+        "end": 745
+      }
+    ]
+  },
+  "technique": {
+    "message": "The mock report describes a panoramic dental X-ray (OPG).",
+    "evidence": [
+      {
+        "report_id": "RPT-003-03",
+        "report_version": 2,
+        "quote": "Synthetic panoramic dental radiograph text scenario.",
+        "start": 121,
+        "end": 173
+      }
+    ]
+  },
+  "speechRequests": 0,
+  "pageErrors": [],
+  "limitation": "Live text LLM, speech muted/blocked, no microphone. Controlled renderer is bounded and does not cover every medical phrase."
+}

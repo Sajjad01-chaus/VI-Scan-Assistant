@@ -1,0 +1,33 @@
+sequenceDiagram
+  actor Clinician
+  participant UI as Browser
+  participant WS as FastAPI voice relay
+  participant STT as Google streaming STT
+  participant API as FastAPI HTTP service
+  participant LLM as Groq interpretation
+  participant DB as SQLite and validators
+  participant TTS as Groq or Google TTS
+  Clinician->>UI: Start microphone
+  UI->>WS: Open owned session WebSocket
+  WS->>STT: Configure streaming
+  WS-->>UI: voice.ready
+  UI->>WS: Binary PCM chunks
+  WS->>STT: Audio chunks
+  STT-->>WS: Partial and final segments
+  WS-->>UI: transcript.partial / transcript.segment
+  UI->>WS: stop after pause, timer or manual finish
+  WS-->>UI: transcript.final
+  UI->>API: POST commands with UUID and context version
+  opt Inference required
+    API->>LLM: Function call or structured interpretation
+    LLM-->>API: Untrusted typed proposal
+  end
+  API->>DB: Validate and execute scoped operation
+  API-->>UI: JSON answer, evidence and session state
+  opt Spoken replies enabled
+    UI->>API: POST speech using saved turn ID
+    API->>TTS: Saved response text or disclosed overview
+    TTS-->>UI: Audio through API
+  end
+  Clinician->>UI: New capture or stop speech
+  UI->>UI: Cancel playback and discard late audio

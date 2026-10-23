@@ -1,0 +1,31 @@
+flowchart TB
+  subgraph Browser[React and TypeScript browser]
+    UI[Patient report, chat, evidence and draft editor]
+    MIC[AudioWorklet: 16 kHz mono PCM]
+    PLAYER[Cloud playback or disclosed browser voice]
+  end
+  subgraph Server[Single FastAPI process]
+    HTTP[HTTP ownership, schema and context checks]
+    WS[Voice relay: bounded audio buffer and final transcript]
+    ROUTE[Python dispatch: acknowledgements and pending identity first]
+    MODEL[Groq typed planner or structured interpretation]
+    RULES[Directory membership, patient and modality scope]
+    OPS[Search, latest report, list reports, draft operations]
+    CHECK[Source-local findings and report evidence validation]
+    SPEECH[Owned saved turn to speech adapter]
+    DB[(SQLite: reports, sessions, turns, drafts and audit)]
+  end
+  CLOUD[Google STT / Groq LLM / Groq and Google TTS]
+  MIC -->|PCM plus stop or cancel| WS
+  WS <-->|STT only| CLOUD
+  WS -->|Final transcript event| UI
+  UI -->|HTTP command with utterance and context IDs| HTTP
+  HTTP --> ROUTE
+  ROUTE <-->|Interpretation when needed| MODEL
+  MODEL <--> CLOUD
+  ROUTE --> RULES --> OPS --> DB
+  OPS --> CHECK -->|Visible answer and citations| UI
+  UI -->|Separate speech request after visible answer| SPEECH
+  SPEECH --> DB
+  SPEECH <--> CLOUD
+  SPEECH -->|Audio bytes| PLAYER

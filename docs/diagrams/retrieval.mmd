@@ -1,0 +1,22 @@
+flowchart TD
+  A[Typed text or final voice transcript] --> B{Local acknowledgement or pending identity reply?}
+  B -->|Acknowledgement| C[Reply locally and preserve request]
+  B -->|Identity| D[Normalize reply or interpret eligible indirect reply]
+  B -->|Other command| E[Typed planner and request validation]
+  E --> F[Search directory for retrieval]
+  F --> G{Exact match count}
+  G -->|Zero| H[Persist pending request; offer conservative suggestions]
+  G -->|Multiple| I[Persist candidates; suspend old report follow-ups]
+  G -->|One| J[Latest report within patient and requested modality]
+  H --> D
+  I --> D
+  D --> K[Validate explicit identity and pending membership]
+  K --> J
+  J --> L{Matching report exists?}
+  L -->|No| M[Set patient; clear active report; explain missing modality]
+  L -->|Yes| N[Persist patient, report and increment context version]
+  E -->|Content question| O[Validate name, active source and no pending switch]
+  O -->|Singular| P[Answer only selected report with original request]
+  O -->|Explicit all reports| Q[List patient reports; summarize each source separately]
+  P --> R[Validate exact excerpts and render citations]
+  Q --> R

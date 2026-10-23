@@ -1,0 +1,19 @@
+stateDiagram-v2
+  [*] --> Idle
+  Idle --> Connecting: microphone gesture
+  Connecting --> Listening: voice.ready
+  Listening --> Listening: partial text displayed
+  Listening --> Finalizing: pause, timer or manual stop
+  Finalizing --> FileSTT: streaming unavailable
+  FileSTT --> Command: final transcript
+  Finalizing --> Command: final transcript
+  Command --> AwaitingIdentity: pending patient
+  AwaitingIdentity --> Command: separate reply or candidate selection
+  Command --> AnswerReady: validated JSON response
+  AnswerReady --> Speaking: speech enabled and audio available
+  AnswerReady --> Idle: speech muted or unavailable
+  Speaking --> Connecting: new capture interrupts audio
+  Speaking --> Idle: completion, stop or mute
+  Connecting --> Idle: cancel or error
+  Listening --> Idle: cancel or error
+  FileSTT --> Idle: transcription error

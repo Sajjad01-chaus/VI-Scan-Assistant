@@ -1,0 +1,11 @@
+{
+  "observed_date": "2026-10-23",
+  "patient_id": "PT-005",
+  "status": "saved_draft",
+  "version": 7,
+  "source_transcript": "Lower right third molar is horizontally impacted. No evidence of fracture.",
+  "fracture_polarity": "negated",
+  "fracture_anatomical_site": "unspecified",
+  "inspection": "read-only; no mutation of user draft",
+  "limitation": "Snapshot at investigation time; not a claim that the version never changes."
+}

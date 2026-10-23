@@ -1,0 +1,360 @@
+[
+  {
+    "step": 1,
+    "request": {
+      "text": "Open Priya's latest OPG report",
+      "intent": "auto",
+      "context_version": 0,
+      "utterance_id": "e2cf6954-87f5-4694-b449-143448b9c98f"
+    },
+    "http": 200,
+    "response": {
+      "kind": "candidates",
+      "message": "More than one patient matches. Select the intended patient before continuing.",
+      "candidates": [
+        {
+          "id": "PT-002",
+          "name": "Priya Shah",
+          "reference": "SYNTH-0002"
+        },
+        {
+          "id": "PT-001",
+          "name": "Priya Sharma",
+          "reference": "SYNTH-0001"
+        }
+      ],
+      "evidence": [],
+      "turn_id": "11763c39-4d69-4339-994d-e3d15b106bce",
+      "session": {
+        "id": "b27fd424-42a6-4fcd-911b-a383a0e0914e",
+        "context_version": 1,
+        "patient": null,
+        "report": null,
+        "pending": {
+          "candidates": [
+            {
+              "id": "PT-002",
+              "name": "Priya Shah",
+              "reference": "SYNTH-0002"
+            },
+            {
+              "id": "PT-001",
+              "name": "Priya Sharma",
+              "reference": "SYNTH-0001"
+            }
+          ],
+          "modality": "OPG"
+        },
+        "expires_at": 1792808214.9451115,
+        "mode": "fixture"
+      },
+      "trace": [
+        {
+          "tool": "search_patients",
+          "arguments": {
+            "query": "Priya"
+          }
+        }
+      ],
+      "mode": "fixture",
+      "elapsed_ms": 6
+    }
+  },
+  {
+    "step": 2,
+    "request": {
+      "patient_id": "PT-001"
+    },
+    "http": 200,
+    "response": {
+      "kind": "report",
+      "message": "Opened Priya Sharma\u2019s latest OPG report.",
+      "report": {
+        "id": "RPT-001-03",
+        "patient_id": "PT-001",
+        "modality": "OPG",
+        "performed_at": "2026-10-19T11:00:00Z",
+        "version": 2,
+        "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown.",
+        "synthetic": true
+      },
+      "evidence": [
+        {
+          "report_id": "RPT-001-03",
+          "report_version": 2,
+          "quote": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown.",
+          "start": 0,
+          "end": 1204
+        }
+      ],
+      "turn_id": "7edb5adb-1c84-4ead-a367-000834e84741",
+      "session": {
+        "id": "b27fd424-42a6-4fcd-911b-a383a0e0914e",
+        "context_version": 2,
+        "patient": {
+          "id": "PT-001",
+          "name": "Priya Sharma",
+          "reference": "SYNTH-0001"
+        },
+        "report": {
+          "id": "RPT-001-03",
+          "patient_id": "PT-001",
+          "modality": "OPG",
+          "performed_at": "2026-10-19T11:00:00Z",
+          "version": 2,
+          "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown.",
+          "synthetic": true
+        },
+        "pending": null,
+        "expires_at": 1792808214.9451115,
+        "mode": "fixture"
+      },
+      "trace": [
+        {
+          "tool": "get_latest_report",
+          "arguments": {
+            "patient_id": "PT-001",
+            "modality": "OPG"
+          }
+        }
+      ],
+      "mode": "fixture",
+      "elapsed_ms": null
+    }
+  },
+  {
+    "step": 3,
+    "request": {
+      "text": "Summarize her report",
+      "intent": "auto",
+      "context_version": 2,
+      "utterance_id": "65861e59-1cf5-471d-95b9-5dc9a09a76b3"
+    },
+    "http": 200,
+    "response": {
+      "kind": "answer",
+      "message": "Lower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar.",
+      "evidence": [
+        {
+          "report_id": "RPT-001-03",
+          "report_version": 2,
+          "quote": "Lower right third molar is horizontally impacted.",
+          "start": 386,
+          "end": 435
+        },
+        {
+          "report_id": "RPT-001-03",
+          "report_version": 2,
+          "quote": "No evidence of a fracture.",
+          "start": 436,
+          "end": 462
+        },
+        {
+          "report_id": "RPT-001-03",
+          "report_version": 2,
+          "quote": "Correlate with clinical examination.",
+          "start": 463,
+          "end": 499
+        },
+        {
+          "report_id": "RPT-001-03",
+          "report_version": 2,
+          "quote": "The impacted tooth is in contact with the distal aspect of the lower right second molar.",
+          "start": 500,
+          "end": 588
+        }
+      ],
+      "turn_id": "d57ac301-b750-4b6f-b413-f26dcd7f05d6",
+      "session": {
+        "id": "b27fd424-42a6-4fcd-911b-a383a0e0914e",
+        "context_version": 2,
+        "patient": {
+          "id": "PT-001",
+          "name": "Priya Sharma",
+          "reference": "SYNTH-0001"
+        },
+        "report": {
+          "id": "RPT-001-03",
+          "patient_id": "PT-001",
+          "modality": "OPG",
+          "performed_at": "2026-10-19T11:00:00Z",
+          "version": 2,
+          "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown.",
+          "synthetic": true
+        },
+        "pending": null,
+        "expires_at": 1792808214.9451115,
+        "mode": "fixture"
+      },
+      "trace": [
+        {
+          "tool": "summarize_report",
+          "arguments": {
+            "report_id": "RPT-001-03"
+          }
+        }
+      ],
+      "mode": "fixture",
+      "elapsed_ms": 4
+    }
+  },
+  {
+    "step": 4,
+    "request": {
+      "text": "Possible periapical radiolucency near the upper left first molar. Further assessment is required.",
+      "intent": "dictate",
+      "context_version": 2,
+      "utterance_id": "05d14689-b1bf-4484-996f-1edfcc2bc0cf"
+    },
+    "http": 200,
+    "response": {
+      "kind": "draft",
+      "message": "Draft prepared. Review the source, findings and uncertainty before saving.",
+      "draft": {
+        "id": "389a7a9a-7327-4edc-a4b3-e20ac3af4780",
+        "version": 1,
+        "status": "preview",
+        "patient_id": "PT-001",
+        "source_transcript": "Possible periapical radiolucency near the upper left first molar. Further assessment is required.",
+        "findings": [
+          {
+            "observation": "periapical radiolucency",
+            "anatomical_site": "upper left first molar",
+            "polarity": "present",
+            "certainty": "uncertain",
+            "evidence": "Possible periapical radiolucency near the upper left first molar.",
+            "source_span": {
+              "start": 0,
+              "end": 65
+            },
+            "review_flags": [
+              "Clinician review required"
+            ]
+          }
+        ],
+        "corrections": [],
+        "readable_report": "Possible periapical radiolucency near the upper left first molar.",
+        "requires_clinician_review": true
+      },
+      "evidence": [],
+      "turn_id": "7a7fee64-3437-4fa9-b07b-26bfe35b62e8",
+      "session": {
+        "id": "b27fd424-42a6-4fcd-911b-a383a0e0914e",
+        "context_version": 2,
+        "patient": {
+          "id": "PT-001",
+          "name": "Priya Sharma",
+          "reference": "SYNTH-0001"
+        },
+        "report": {
+          "id": "RPT-001-03",
+          "patient_id": "PT-001",
+          "modality": "OPG",
+          "performed_at": "2026-10-19T11:00:00Z",
+          "version": 2,
+          "content": "CLINICAL INDICATION:\nAssessment of the lower right third molar in a fictional patient with intermittent discomfort.\n\nTECHNIQUE:\nSynthetic panoramic dental radiograph text scenario. No image was acquired or analyzed by this application.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nLower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination. The impacted tooth is in contact with the distal aspect of the lower right second molar. The visible mandibular cortex is continuous. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nIMPRESSION:\nHorizontally impacted lower right third molar. Canal proximity remains indeterminate on the panoramic view.\n\nCLINICAL CORRELATION:\nReview the clinical symptoms and adjacent second molar. Any additional imaging decision requires clinician assessment.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown.",
+          "synthetic": true
+        },
+        "pending": null,
+        "expires_at": 1792808214.9451115,
+        "mode": "fixture"
+      },
+      "trace": [
+        {
+          "tool": "extract_findings",
+          "arguments": {
+            "source": "current transcript"
+          }
+        }
+      ],
+      "mode": "fixture",
+      "elapsed_ms": 6
+    }
+  },
+  {
+    "step": 5,
+    "request": "Attempt unsupported fracture edit",
+    "http": 422,
+    "response": {
+      "detail": "Unsupported clinical claim: observation must be quoted within its source evidence."
+    }
+  },
+  {
+    "step": 6,
+    "request": "Save validated draft",
+    "http": 200,
+    "response": {
+      "id": "389a7a9a-7327-4edc-a4b3-e20ac3af4780",
+      "session_id": "b27fd424-42a6-4fcd-911b-a383a0e0914e",
+      "patient_id": "PT-001",
+      "version": 2,
+      "status": "saved_draft",
+      "source_transcript": "Possible periapical radiolucency near the upper left first molar. Further assessment is required.",
+      "findings": [
+        {
+          "observation": "periapical radiolucency",
+          "anatomical_site": "upper left first molar",
+          "polarity": "present",
+          "certainty": "uncertain",
+          "evidence": "Possible periapical radiolucency near the upper left first molar.",
+          "source_span": {
+            "start": 0,
+            "end": 65
+          },
+          "review_flags": [
+            "Clinician review required"
+          ]
+        }
+      ],
+      "corrections": [],
+      "readable_report": "Possible periapical radiolucency near the upper left first molar.",
+      "requires_clinician_review": true
+    }
+  },
+  {
+    "step": 7,
+    "request": {
+      "text": "Open Meera Iyer's latest OPG report",
+      "intent": "auto",
+      "context_version": 2,
+      "utterance_id": "84673d61-fe76-44bd-b548-2c9880d0db25"
+    },
+    "http": 200,
+    "response": {
+      "kind": "missing_report",
+      "message": "No OPG report is available for Meera Iyer. The active report has been cleared.",
+      "evidence": [],
+      "turn_id": "b68a9487-1647-45bc-8060-7502371e439b",
+      "session": {
+        "id": "b27fd424-42a6-4fcd-911b-a383a0e0914e",
+        "context_version": 3,
+        "patient": {
+          "id": "PT-006",
+          "name": "Meera Iyer",
+          "reference": "SYNTH-0006"
+        },
+        "report": null,
+        "pending": null,
+        "expires_at": 1792808214.9451115,
+        "mode": "fixture"
+      },
+      "trace": [
+        {
+          "tool": "search_patients",
+          "arguments": {
+            "query": "Meera Iyer"
+          }
+        },
+        {
+          "tool": "get_latest_report",
+          "arguments": {
+            "patient_id": "PT-006",
+            "modality": "OPG"
+          }
+        }
+      ],
+      "mode": "fixture",
+      "elapsed_ms": 10
+    }
+  }
+]

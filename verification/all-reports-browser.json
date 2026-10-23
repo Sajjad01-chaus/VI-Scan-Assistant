@@ -1,0 +1,20 @@
+{
+  "passed": [
+    "original Priya ambiguity and selection",
+    "CBCT switch",
+    "exact all-reports request covers all three reports",
+    "every report has cited evidence",
+    "older citation preview preserves selected CBCT",
+    "multi-report chat survives refresh",
+    "subsequent singular summary stays on selected CBCT"
+  ],
+  "reportIds": [
+    "RPT-001-03",
+    "RPT-001-02",
+    "RPT-001-01"
+  ],
+  "response": "Summary of all available reports (3) for Priya Sharma.\n\nOPG · 2026-10-19T11:00:00Z · RPT-001-03\nHorizontally impacted lower right third molar. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.\n\nCBCT · 2026-09-10T10:30:00Z · RPT-001-02\nHorizontally impacted lower right third molar. The relationship to the inferior alveolar canal cannot be determined confidently in this recorded field.\n\nOPG · 2026-08-14T09:00:00Z · RPT-001-01\nLower right third molar is horizontally impacted. The relationship to the inferior alveolar canal cannot be determined confidently on this panoramic examination.",
+  "speechRequests": 0,
+  "pageErrors": [],
+  "limitation": "Live text LLM with speech muted and blocked; no microphone or STT/TTS calls. Spoken overview transport is separately verified with a local stub, not audible cloud output."
+}

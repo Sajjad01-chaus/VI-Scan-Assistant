@@ -1,0 +1,100 @@
+{
+  "passed": [
+    "Rohit Desai suggests Rohan with confirmation",
+    "Yes opens Rohan OPG",
+    "named first-name findings question answers current source",
+    "repeated full-name findings question answers without reopening",
+    "show findings remains a question",
+    "different patient question requires explicit source switch",
+    "history and selection survive refresh"
+  ],
+  "replies": [
+    {
+      "question": "Okay, so can you tell me what are the findings in Rohan's report?",
+      "message": "Upper right third molar is absent. The adjacent upper right second molar is present.",
+      "trace": [
+        {
+          "tool": "answer_from_report",
+          "arguments": {
+            "report_id": "RPT-005-03"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "report_id": "RPT-005-03",
+          "report_version": 2,
+          "quote": "Upper right third molar is absent.",
+          "start": 387,
+          "end": 421
+        },
+        {
+          "report_id": "RPT-005-03",
+          "report_version": 2,
+          "quote": "The adjacent upper right second molar is present.",
+          "start": 574,
+          "end": 623
+        }
+      ]
+    },
+    {
+      "question": "I asked what are the findings in Rohan Desai's report.",
+      "message": "Upper right third molar is absent. Prior extraction and developmental absence cannot be distinguished from this report.",
+      "trace": [
+        {
+          "tool": "answer_from_report",
+          "arguments": {
+            "report_id": "RPT-005-03"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "report_id": "RPT-005-03",
+          "report_version": 2,
+          "quote": "Upper right third molar is absent.",
+          "start": 387,
+          "end": 421
+        },
+        {
+          "report_id": "RPT-005-03",
+          "report_version": 2,
+          "quote": "Prior extraction and developmental absence cannot be distinguished from this report.",
+          "start": 727,
+          "end": 811
+        }
+      ]
+    },
+    {
+      "question": "Show me the findings in Rohan's report.",
+      "message": "Upper right third molar is absent. The adjacent upper right second molar is present.",
+      "trace": [
+        {
+          "tool": "answer_from_report",
+          "arguments": {
+            "report_id": "RPT-005-03"
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "report_id": "RPT-005-03",
+          "report_version": 2,
+          "quote": "Upper right third molar is absent.",
+          "start": 387,
+          "end": 421
+        },
+        {
+          "report_id": "RPT-005-03",
+          "report_version": 2,
+          "quote": "The adjacent upper right second molar is present.",
+          "start": 574,
+          "end": 623
+        }
+      ]
+    }
+  ],
+  "speechRequests": 0,
+  "pageErrors": [],
+  "limitation": "Live text LLM with muted/blocked speech; no microphone or STT/TTS calls. This does not establish human speech recognition or universal conversational correctness."
+}

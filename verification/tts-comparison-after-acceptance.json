@@ -1,0 +1,83 @@
+{
+  "methodology": "Three TTS requests per provider with alternating order and identical short response. Times include network and complete response transfer, not time to playable streaming audio. Voice quality not scored.",
+  "results": [
+    {
+      "task": "tts",
+      "provider": "groq",
+      "model": "canopylabs/orpheus-v1-english",
+      "trial": 1,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 1346,
+      "elapsedMs": 1712,
+      "audioBytes": 138310,
+      "audioFile": "groq-tts-accepted-trial-1.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "google",
+      "model": "gemini-3.8-flash-lite-tts",
+      "trial": 1,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 3165,
+      "elapsedMs": 3598,
+      "audioBytes": 263396,
+      "audioFile": "google-tts-accepted-trial-1.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "google",
+      "model": "gemini-3.8-flash-lite-tts",
+      "trial": 2,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 3016,
+      "elapsedMs": 3254,
+      "audioBytes": 255716,
+      "audioFile": "google-tts-accepted-trial-2.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "groq",
+      "model": "canopylabs/orpheus-v1-english",
+      "trial": 2,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 808,
+      "elapsedMs": 1530,
+      "audioBytes": 138310,
+      "audioFile": "groq-tts-accepted-trial-2.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "groq",
+      "model": "canopylabs/orpheus-v1-english",
+      "trial": 3,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 728,
+      "elapsedMs": 2247,
+      "audioBytes": 138310,
+      "audioFile": "groq-tts-accepted-trial-3.wav"
+    },
+    {
+      "task": "tts",
+      "provider": "google",
+      "model": "gemini-3.8-flash-lite-tts",
+      "trial": 3,
+      "text": "Your draft report is ready for clinician review.",
+      "ok": true,
+      "http": 200,
+      "headersMs": 2688,
+      "elapsedMs": 2824,
+      "audioBytes": 248036,
+      "audioFile": "google-tts-accepted-trial-3.wav"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "question": "Have you find any key findings in her report?",
+  "response": {
+    "kind": "answer",
+    "message": "No definite darker area near a root tip is identified in the described region. Root overlap limits assessment of the palatal root.",
+    "evidence": [
+      {
+        "report_id": "RPT-006-03",
+        "report_version": 2,
+        "quote": "No definite periapical radiolucency is identified in the described region.",
+        "start": 379,
+        "end": 453
+      },
+      {
+        "report_id": "RPT-006-03",
+        "report_version": 2,
+        "quote": "Root overlap limits assessment of the palatal root.",
+        "start": 615,
+        "end": 666
+      }
+    ],
+    "cause_not_established": false,
+    "turn_id": "4abd9a4d-be1e-40b3-8524-86b1eaee3db4",
+    "session": {
+      "id": "4f2b2a0b-6be8-4a9f-bfdb-41d66f97e02a",
+      "context_version": 1,
+      "patient": {
+        "id": "PT-006",
+        "name": "Meera Iyer",
+        "reference": "SYNTH-0006"
+      },
+      "report": {
+        "id": "RPT-006-03",
+        "patient_id": "PT-006",
+        "modality": "IOPA",
+        "performed_at": "2026-10-19T11:00:00Z",
+        "version": 2,
+        "content": "CLINICAL INDICATION:\nFocused assessment of the upper right first-molar apical region in a fictional patient.\n\nTECHNIQUE:\nSynthetic intraoral periapical text scenario centered on the upper right first molar. No image is attached.\n\nCOMPARISON:\nEarlier mock examinations exist in the directory; direct image comparison was not performed. Interval change is not asserted.\n\nFINDINGS:\nNo definite periapical radiolucency is identified in the described region. Clinical correlation is advised. A restoration is described at the upper right first molar. The visible apical outline is maintained in the recorded projection. Root overlap limits assessment of the palatal root. Early apical pathology cannot be excluded by this appearance alone.\n\nIMPRESSION:\nNo definite periapical radiolucency at the upper right first molar in the described view. This does not establish the cause of any symptoms.\n\nCLINICAL CORRELATION:\nCorrelate with examination and pulp testing when clinically indicated. This mock text is not a treatment recommendation.\n\nLIMITATIONS:\nFictional report for software evaluation only. It is not a diagnostic interpretation of an actual image. Only the described findings are supported; unmentioned findings are unknown.",
+        "synthetic": true
+      },
+      "pending": null,
+      "expires_at": 1792817240.3306968,
+      "mode": "live"
+    },
+    "trace": [
+      {
+        "tool": "answer_from_report",
+        "arguments": {
+          "report_id": "RPT-006-03"
+        }
+      }
+    ],
+    "mode": "live",
+    "elapsed_ms": 3769
+  },
+  "speechAttempts": 0,
+  "method": "Live text-only LLM calls; speech muted and all speech endpoints intercepted; no microphone used."
+}

@@ -1,0 +1,181 @@
+{
+  "synthetic_only": true,
+  "patients": [
+    {
+      "id": "PT-001",
+      "name": "Priya Sharma",
+      "reference": "SYNTH-0001"
+    },
+    {
+      "id": "PT-002",
+      "name": "Priya Shah",
+      "reference": "SYNTH-0002"
+    },
+    {
+      "id": "PT-003",
+      "name": "Arjun Mehta",
+      "reference": "SYNTH-0003"
+    },
+    {
+      "id": "PT-004",
+      "name": "Aisha Khan",
+      "reference": "SYNTH-0004"
+    },
+    {
+      "id": "PT-005",
+      "name": "Rohan Desai",
+      "reference": "SYNTH-0005"
+    },
+    {
+      "id": "PT-006",
+      "name": "Meera Iyer",
+      "reference": "SYNTH-0006"
+    }
+  ],
+  "reports": [
+    {
+      "id": "RPT-001-01",
+      "patient_id": "PT-001",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 1,
+      "content": "Previously described finding: Lower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination."
+    },
+    {
+      "id": "RPT-001-02",
+      "patient_id": "PT-001",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 1,
+      "content": "Synthetic CBCT text report. Lower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination."
+    },
+    {
+      "id": "RPT-001-03",
+      "patient_id": "PT-001",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 1,
+      "content": "Lower right third molar is horizontally impacted. No evidence of a fracture. Correlate with clinical examination."
+    },
+    {
+      "id": "RPT-002-01",
+      "patient_id": "PT-002",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 1,
+      "content": "Previously described finding: Possible periapical radiolucency near the upper left first molar. Further clinical assessment is required."
+    },
+    {
+      "id": "RPT-002-02",
+      "patient_id": "PT-002",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 1,
+      "content": "Synthetic CBCT text report. Possible periapical radiolucency near the upper left first molar. Further clinical assessment is required."
+    },
+    {
+      "id": "RPT-002-03",
+      "patient_id": "PT-002",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 1,
+      "content": "Possible periapical radiolucency near the upper left first molar. Further clinical assessment is required."
+    },
+    {
+      "id": "RPT-003-01",
+      "patient_id": "PT-003",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 1,
+      "content": "Previously described finding: Lower left third molar is partially erupted. No definite caries identified in the described tooth."
+    },
+    {
+      "id": "RPT-003-02",
+      "patient_id": "PT-003",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 1,
+      "content": "Synthetic CBCT text report. Lower left third molar is partially erupted. No definite caries identified in the described tooth."
+    },
+    {
+      "id": "RPT-003-03",
+      "patient_id": "PT-003",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 1,
+      "content": "Lower left third molar is partially erupted. No definite caries identified in the described tooth."
+    },
+    {
+      "id": "RPT-004-01",
+      "patient_id": "PT-004",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 1,
+      "content": "Previously described finding: Mild generalized horizontal bone loss is described. Findings require clinician review."
+    },
+    {
+      "id": "RPT-004-02",
+      "patient_id": "PT-004",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 1,
+      "content": "Synthetic CBCT text report. Mild generalized horizontal bone loss is described. Findings require clinician review."
+    },
+    {
+      "id": "RPT-004-03",
+      "patient_id": "PT-004",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 1,
+      "content": "Mild generalized horizontal bone loss is described. Findings require clinician review."
+    },
+    {
+      "id": "RPT-005-01",
+      "patient_id": "PT-005",
+      "modality": "OPG",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 1,
+      "content": "Previously described finding: Upper right third molar is absent. No other observation was dictated for this synthetic examination."
+    },
+    {
+      "id": "RPT-005-02",
+      "patient_id": "PT-005",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 1,
+      "content": "Synthetic CBCT text report. Upper right third molar is absent. No other observation was dictated for this synthetic examination."
+    },
+    {
+      "id": "RPT-005-03",
+      "patient_id": "PT-005",
+      "modality": "OPG",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 1,
+      "content": "Upper right third molar is absent. No other observation was dictated for this synthetic examination."
+    },
+    {
+      "id": "RPT-006-01",
+      "patient_id": "PT-006",
+      "modality": "IOPA",
+      "performed_at": "2026-08-14T09:00:00Z",
+      "version": 1,
+      "content": "Previously described finding: No definite periapical radiolucency is identified in the described region. Clinical correlation is advised."
+    },
+    {
+      "id": "RPT-006-02",
+      "patient_id": "PT-006",
+      "modality": "CBCT",
+      "performed_at": "2026-09-10T10:30:00Z",
+      "version": 1,
+      "content": "Synthetic CBCT text report. No definite periapical radiolucency is identified in the described region. Clinical correlation is advised."
+    },
+    {
+      "id": "RPT-006-03",
+      "patient_id": "PT-006",
+      "modality": "IOPA",
+      "performed_at": "2026-10-19T11:00:00Z",
+      "version": 1,
+      "content": "No definite periapical radiolucency is identified in the described region. Clinical correlation is advised."
+    }
+  ]
+}

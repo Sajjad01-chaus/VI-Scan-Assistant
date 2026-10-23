@@ -1,0 +1,9 @@
+{
+  "composeBuildAndStartup": true,
+  "freshMigrationAndSeed": true,
+  "reportRetrieval": true,
+  "namedVolumeSurvivedContainerRecreation": true,
+  "selectedReportRestored": true,
+  "commandHistoryRestored": true,
+  "realProviderKeysPassedToTestContainer": false
+}

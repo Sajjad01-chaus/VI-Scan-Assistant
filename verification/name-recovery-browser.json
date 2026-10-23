@@ -1,0 +1,14 @@
+{
+  "mode": "live",
+  "input": "Hello, open Ayesha Khan's report.",
+  "passed": [
+    "close name requires explicit confirmation",
+    "previous patient paused",
+    "pronoun follow-up blocked",
+    "confirmed Aisha opens PT-004 report",
+    "summary cites only RPT-004-03",
+    "editable recognized request",
+    "no horizontal overflow at 1366 and 390 pixels"
+  ],
+  "pageErrors": []
+}

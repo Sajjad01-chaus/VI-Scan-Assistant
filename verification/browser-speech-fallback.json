@@ -1,0 +1,12 @@
+{
+  "passed": [
+    "cloud failure triggers disclosed browser voice",
+    "fallback uses exact displayed answer",
+    "compound answer includes unknown cause",
+    "stop cancels browser voice",
+    "mute suppresses fallback"
+  ],
+  "spoken": "The report notes a possible darker area near the root tip of the upper left first molar. The cited report does not establish the underlying cause, so I cannot tell you why it happened. Overlapping structures make the root tips difficult to assess.",
+  "pageErrors": [],
+  "limitation": "Browser speech API and cloud outage are controlled test doubles. This verifies app integration, not installed voice availability or human audibility; the headless inventory had no native voices."
+}

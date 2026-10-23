@@ -1,0 +1,58 @@
+erDiagram
+  PATIENT ||--o{ REPORT : has
+  PATIENT o|--o{ DRAFT : assigned
+  SESSION ||--o{ TURN : records
+  SESSION ||--o{ DRAFT : owns
+  SESSION ||--o{ AUDIT_EVENT : records
+  DRAFT ||--o{ DRAFT_REVISION : versions
+  SESSION {
+    string id PK
+    string owner_hash
+    string selected_patient_id FK
+    string selected_report_id FK
+    int context_version
+    text pending_json
+    float expires_at
+  }
+  REPORT {
+    string id PK
+    string patient_id FK
+    string modality
+    string performed_at
+    int version
+    text content
+  }
+  TURN {
+    string id PK
+    string session_id FK
+    string utterance_id
+    text request_json
+    text response_json
+    float created_at
+  }
+  DRAFT {
+    string id PK
+    string session_id FK
+    string patient_id FK
+    string status
+    int version
+    text body_json
+  }
+  PATIENT {
+    string id PK
+    string name
+    string reference
+  }
+  DRAFT_REVISION {
+    string id PK
+    string draft_id FK
+    int version
+    text body_json
+  }
+  AUDIT_EVENT {
+    string id PK
+    string session_id FK
+    string event_type
+    float created_at
+    text metadata_json
+  }

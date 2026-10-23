@@ -1,0 +1,13 @@
+flowchart TD
+  A[Create draft: typed or finalized spoken observations] --> B{Pending identity?}
+  B -->|Yes| C[Resolve identity before creating draft]
+  B -->|No| D[Structured extraction with source transcript]
+  D --> E[Validate schema, quoted observation, site and qualifiers]
+  E -->|Invalid| F[Visible validation; no accepted draft]
+  E -->|Valid| G[Persist preview with evidence and source spans]
+  G --> H[Edit fields or JSON and inspect readable preview]
+  H --> I[PATCH revalidates and stores prior draft revision]
+  I --> J{Explicit save with current version and patient?}
+  J -->|No| K[Remain preview or show validation conflict]
+  J -->|Yes| L[Saved draft; clinician review remains required]
+  I --> M[Export validated current JSON]
